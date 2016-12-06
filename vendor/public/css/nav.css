@@ -1,0 +1,117 @@
+#nav {
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #59ABE3;
+    width: 100%;
+    top:0;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    padding: 0;
+    display: block;
+    width: 150px;
+    text-align: center;
+    border-left: 1px solid #C5EFF7;
+    background-image: linear-gradient(to bottom, transparent 50%, #3498DB 50%, #3498DB 95%, #C5EFF7 95%);
+    background-size: 100% 200%;
+    background-position: top center;
+    transition: all .25s ease-in-out;
+    transform: skew(-15deg);
+}
+
+nav ul li:last-child {
+    margin-right: 50px;
+    border-right: 1px solid #C5EFF7;
+}
+
+nav li:hover {
+    background-position: bottom center;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+nav a {
+    color: white;
+    font-family: Myriad Pro Semibold, serif;
+    padding: 10px;
+    display: block;
+    transform: skew(15deg);
+    font-size: 1.2em;
+}
+
+nav a:hover{
+    color:white;
+    text-decoration: none;
+}
+
+nav #menu-toggle {
+    display: none;
+}
+
+nav .label-toggle {
+    display: none;
+}
+
+nav a:visited{
+    color:white;
+}
+
+@media screen and (max-width: 985px) {
+    #nav ul {
+        opacity: 0;
+        visibility: hidden;
+        width: 100vw;
+        flex-direction: column;
+        max-height: 55px;
+    }
+
+    #nav li {
+        color: #53354A;
+        font-size: 1.5em;
+        padding: 0.2em 0;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-bottom: 1px solid white;
+        transform: skew(0deg);
+
+    }
+
+    #nav li:hover {
+        background-color: #3498DB;
+    }
+
+    #nav #menu-toggle:checked ~ ul {
+        opacity: 1;
+        align-items: center;
+        visibility: visible;
+        max-height: 100%;
+    }
+
+    #nav .label-toggle {
+        background: linear-gradient(to bottom, white 0%, white 20%, transparent 20%, transparent 40%, white 40%, white 60%, transparent 60%, transparent 80%, white 80%, white 100%);
+        cursor: pointer;
+        display: block;
+        float: right;
+        height: 25px;
+        width: 25px;
+        margin-top: 15px;
+        margin-bottom: -45px;
+        margin-right: 15px;
+    }
+
+    #nav nav ul li a {
+        transform: skew(0deg);
+    }
+
+    #nav nav ul li:last-child {
+        border-bottom: 0;
+        margin-right: 0;
+
+    }
+}

@@ -1,0 +1,76 @@
+#bg_loop {
+    position: relative;
+    overflow: hidden;
+}
+
+#bg_loop video {
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+}
+
+.brightness {
+    filter: brightness(0.6);
+}
+
+.title_video {
+    position: absolute;
+    color: white;
+    font: bold 40px/45px Myriad Pro Bold, Myriad Pro Bold;
+    letter-spacing: -1px;
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+#content_video span:first-child {
+    left: 0;
+    top: 40%;
+}
+
+#content_video span:nth-child(2) {
+    left: 0;
+    top: 50%;
+}
+
+#content_video span:last-child {
+    left: 50%;
+    bottom: 10%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    color: #C5EFF7;
+}
+
+@media all and (min-width: 1520px) {
+    #bg_loop {
+        height: calc(100vh);
+    }
+}
+
+@media screen and (max-width: 980px) {
+    video {
+        display: none;
+    }
+}
+
+
+
+
+@media screen and (max-width: 530px) {
+    .title_video {
+        font: bold 30px/35px Myriad Pro Bold, Myriad Pro Bold;
+
+    }
+}
+
+@media screen and (max-width: 395px) {
+    .title_video {
+        font: bold 30px/25px Myriad Pro Bold, Myriad Pro Bold;
+
+    }
+}
