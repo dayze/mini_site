@@ -36,6 +36,13 @@ switch ($action) {
         include("app/views/layout.php");
         break;
 
-
-
+    default:
+        ob_start();
+        header("HTTP/1.0 404 Not Found");
+        ob_get_contents();
+        ob_end_clean();
+        $navigation = file_get_contents("app/views/nav/nav.part.html");
+        $content = Tools::setObContent("app/views/part/error.part.html");
+        include("app/views/layout.php");
+        break;
 }

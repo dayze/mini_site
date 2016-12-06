@@ -47,6 +47,14 @@ body {
     padding: 15px;
 }
 
+
+@media all and (max-width: 980px) {
+    .header-home{
+        margin-top: 55px;
+    }
+}
+
+
 .header div {
     padding-right: 15px;
 }
